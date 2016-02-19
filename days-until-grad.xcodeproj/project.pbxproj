@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE250BE81C7487BB0053EDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250BE71C7487BB0053EDB5 /* AppDelegate.swift */; };
+		CE250BEA1C7487BB0053EDB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250BE91C7487BB0053EDB5 /* ViewController.swift */; };
+		CE250BED1C7487BB0053EDB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE250BEB1C7487BB0053EDB5 /* Main.storyboard */; };
+		CE250BEF1C7487BB0053EDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE250BEE1C7487BB0053EDB5 /* Assets.xcassets */; };
+		CE250BF21C7487BB0053EDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE250BF01C7487BB0053EDB5 /* LaunchScreen.storyboard */; };
+		CE250BFF1C74CF260053EDB5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE250BFD1C74CF260053EDB5 /* Interface.storyboard */; };
+		CE250C011C74CF260053EDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE250C001C74CF260053EDB5 /* Assets.xcassets */; };
+		CE250C081C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE250C071C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE250C0F1C74CF260053EDB5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C0E1C74CF260053EDB5 /* InterfaceController.swift */; };
+		CE250C111C74CF260053EDB5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C101C74CF260053EDB5 /* ExtensionDelegate.swift */; };
+		CE250C171C74CF260053EDB5 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C161C74CF260053EDB5 /* ComplicationController.swift */; };
+		CE250C191C74CF260053EDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE250C181C74CF260053EDB5 /* Assets.xcassets */; };
+		CE250C1D1C74CF260053EDB5 /* days-until-grad-apple-watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE250BFB1C74CF260053EDB5 /* days-until-grad-apple-watch.app */; };
+		CE250C271C7564560053EDB5 /* GraduationDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C261C7564560053EDB5 /* GraduationDates.swift */; };
+		CE55D7D31C75931E00DF65D3 /* GraduationDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C261C7564560053EDB5 /* GraduationDates.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE250C091C74CF260053EDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE250BDC1C7487BB0053EDB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE250C061C74CF260053EDB5;
+			remoteInfo = "days-until-grad-apple-watch Extension";
+		};
+		CE250C1B1C74CF260053EDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE250BDC1C7487BB0053EDB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE250BFA1C74CF260053EDB5;
+			remoteInfo = "days-until-grad-apple-watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE250C211C74CF260053EDB5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE250C081C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE250C251C74CF260053EDB5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CE250C1D1C74CF260053EDB5 /* days-until-grad-apple-watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE250BE41C7487BB0053EDB5 /* days-until-grad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "days-until-grad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE250BE71C7487BB0053EDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE250BE91C7487BB0053EDB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE250BEC1C7487BB0053EDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE250BEE1C7487BB0053EDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE250BF11C7487BB0053EDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE250BF31C7487BB0053EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE250BFB1C74CF260053EDB5 /* days-until-grad-apple-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "days-until-grad-apple-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE250BFE1C74CF260053EDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CE250C001C74CF260053EDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE250C021C74CF260053EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE250C071C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "days-until-grad-apple-watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE250C0D1C74CF260053EDB5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CE250C0E1C74CF260053EDB5 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CE250C101C74CF260053EDB5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CE250C161C74CF260053EDB5 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		CE250C181C74CF260053EDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE250C1A1C74CF260053EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE250C261C7564560053EDB5 /* GraduationDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraduationDates.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE250BE11C7487BB0053EDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE250C041C74CF260053EDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE250BDB1C7487BB0053EDB5 = {
+			isa = PBXGroup;
+			children = (
+				CE250BE61C7487BB0053EDB5 /* days-until-grad */,
+				CE250BFC1C74CF260053EDB5 /* days-until-grad-apple-watch */,
+				CE250C0B1C74CF260053EDB5 /* days-until-grad-apple-watch Extension */,
+				CE250BE51C7487BB0053EDB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE250BE51C7487BB0053EDB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE250BE41C7487BB0053EDB5 /* days-until-grad.app */,
+				CE250BFB1C74CF260053EDB5 /* days-until-grad-apple-watch.app */,
+				CE250C071C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE250BE61C7487BB0053EDB5 /* days-until-grad */ = {
+			isa = PBXGroup;
+			children = (
+				CE250BE71C7487BB0053EDB5 /* AppDelegate.swift */,
+				CE250BE91C7487BB0053EDB5 /* ViewController.swift */,
+				CE250C261C7564560053EDB5 /* GraduationDates.swift */,
+				CE250BEB1C7487BB0053EDB5 /* Main.storyboard */,
+				CE250BEE1C7487BB0053EDB5 /* Assets.xcassets */,
+				CE250BF01C7487BB0053EDB5 /* LaunchScreen.storyboard */,
+				CE250BF31C7487BB0053EDB5 /* Info.plist */,
+			);
+			path = "days-until-grad";
+			sourceTree = "<group>";
+		};
+		CE250BFC1C74CF260053EDB5 /* days-until-grad-apple-watch */ = {
+			isa = PBXGroup;
+			children = (
+				CE250BFD1C74CF260053EDB5 /* Interface.storyboard */,
+				CE250C001C74CF260053EDB5 /* Assets.xcassets */,
+				CE250C021C74CF260053EDB5 /* Info.plist */,
+			);
+			path = "days-until-grad-apple-watch";
+			sourceTree = "<group>";
+		};
+		CE250C0B1C74CF260053EDB5 /* days-until-grad-apple-watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE250C0E1C74CF260053EDB5 /* InterfaceController.swift */,
+				CE250C101C74CF260053EDB5 /* ExtensionDelegate.swift */,
+				CE250C161C74CF260053EDB5 /* ComplicationController.swift */,
+				CE250C181C74CF260053EDB5 /* Assets.xcassets */,
+				CE250C1A1C74CF260053EDB5 /* Info.plist */,
+				CE250C0C1C74CF260053EDB5 /* Supporting Files */,
+			);
+			path = "days-until-grad-apple-watch Extension";
+			sourceTree = "<group>";
+		};
+		CE250C0C1C74CF260053EDB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE250C0D1C74CF260053EDB5 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE250BE31C7487BB0053EDB5 /* days-until-grad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE250BF61C7487BB0053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad" */;
+			buildPhases = (
+				CE250BE01C7487BB0053EDB5 /* Sources */,
+				CE250BE11C7487BB0053EDB5 /* Frameworks */,
+				CE250BE21C7487BB0053EDB5 /* Resources */,
+				CE250C251C74CF260053EDB5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE250C1C1C74CF260053EDB5 /* PBXTargetDependency */,
+			);
+			name = "days-until-grad";
+			productName = "days-until-grad";
+			productReference = CE250BE41C7487BB0053EDB5 /* days-until-grad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE250BFA1C74CF260053EDB5 /* days-until-grad-apple-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE250C221C74CF260053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad-apple-watch" */;
+			buildPhases = (
+				CE250BF91C74CF260053EDB5 /* Resources */,
+				CE250C211C74CF260053EDB5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE250C0A1C74CF260053EDB5 /* PBXTargetDependency */,
+			);
+			name = "days-until-grad-apple-watch";
+			productName = "days-until-grad-apple-watch";
+			productReference = CE250BFB1C74CF260053EDB5 /* days-until-grad-apple-watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CE250C061C74CF260053EDB5 /* days-until-grad-apple-watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE250C1E1C74CF260053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad-apple-watch Extension" */;
+			buildPhases = (
+				CE250C031C74CF260053EDB5 /* Sources */,
+				CE250C041C74CF260053EDB5 /* Frameworks */,
+				CE250C051C74CF260053EDB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "days-until-grad-apple-watch Extension";
+			productName = "days-until-grad-apple-watch Extension";
+			productReference = CE250C071C74CF260053EDB5 /* days-until-grad-apple-watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE250BDC1C7487BB0053EDB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jonathan Chan";
+				TargetAttributes = {
+					CE250BE31C7487BB0053EDB5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9Z4VM84YX9;
+					};
+					CE250BFA1C74CF260053EDB5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9Z4VM84YX9;
+					};
+					CE250C061C74CF260053EDB5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9Z4VM84YX9;
+					};
+				};
+			};
+			buildConfigurationList = CE250BDF1C7487BB0053EDB5 /* Build configuration list for PBXProject "days-until-grad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE250BDB1C7487BB0053EDB5;
+			productRefGroup = CE250BE51C7487BB0053EDB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE250BE31C7487BB0053EDB5 /* days-until-grad */,
+				CE250BFA1C74CF260053EDB5 /* days-until-grad-apple-watch */,
+				CE250C061C74CF260053EDB5 /* days-until-grad-apple-watch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE250BE21C7487BB0053EDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE250BF21C7487BB0053EDB5 /* LaunchScreen.storyboard in Resources */,
+				CE250BEF1C7487BB0053EDB5 /* Assets.xcassets in Resources */,
+				CE250BED1C7487BB0053EDB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE250BF91C74CF260053EDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE250C011C74CF260053EDB5 /* Assets.xcassets in Resources */,
+				CE250BFF1C74CF260053EDB5 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE250C051C74CF260053EDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE250C191C74CF260053EDB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE250BE01C7487BB0053EDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE250BEA1C7487BB0053EDB5 /* ViewController.swift in Sources */,
+				CE250C271C7564560053EDB5 /* GraduationDates.swift in Sources */,
+				CE250BE81C7487BB0053EDB5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE250C031C74CF260053EDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE55D7D31C75931E00DF65D3 /* GraduationDates.swift in Sources */,
+				CE250C111C74CF260053EDB5 /* ExtensionDelegate.swift in Sources */,
+				CE250C171C74CF260053EDB5 /* ComplicationController.swift in Sources */,
+				CE250C0F1C74CF260053EDB5 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE250C0A1C74CF260053EDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE250C061C74CF260053EDB5 /* days-until-grad-apple-watch Extension */;
+			targetProxy = CE250C091C74CF260053EDB5 /* PBXContainerItemProxy */;
+		};
+		CE250C1C1C74CF260053EDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE250BFA1C74CF260053EDB5 /* days-until-grad-apple-watch */;
+			targetProxy = CE250C1B1C74CF260053EDB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE250BEB1C7487BB0053EDB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE250BEC1C7487BB0053EDB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE250BF01C7487BB0053EDB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE250BF11C7487BB0053EDB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE250BFD1C74CF260053EDB5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE250BFE1C74CF260053EDB5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE250BF41C7487BB0053EDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE250BF51C7487BB0053EDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE250BF71C7487BB0053EDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "days-until-grad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE250BF81C7487BB0053EDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "days-until-grad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE250C1F1C74CF260053EDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "days-until-grad-apple-watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		CE250C201C74CF260053EDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "days-until-grad-apple-watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		CE250C231C74CF260053EDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = days_until_grad_apple_watch_Extension;
+				INFOPLIST_FILE = "days-until-grad-apple-watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		CE250C241C74CF260053EDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = days_until_grad_apple_watch_Extension;
+				INFOPLIST_FILE = "days-until-grad-apple-watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "caviar.respect.days-until-grad.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE250BDF1C7487BB0053EDB5 /* Build configuration list for PBXProject "days-until-grad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE250BF41C7487BB0053EDB5 /* Debug */,
+				CE250BF51C7487BB0053EDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE250BF61C7487BB0053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE250BF71C7487BB0053EDB5 /* Debug */,
+				CE250BF81C7487BB0053EDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE250C1E1C74CF260053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad-apple-watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE250C1F1C74CF260053EDB5 /* Debug */,
+				CE250C201C74CF260053EDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE250C221C74CF260053EDB5 /* Build configuration list for PBXNativeTarget "days-until-grad-apple-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE250C231C74CF260053EDB5 /* Debug */,
+				CE250C241C74CF260053EDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE250BDC1C7487BB0053EDB5 /* Project object */;
+}

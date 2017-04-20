@@ -22,6 +22,7 @@
 		CE250C1D1C74CF260053EDB5 /* days-until-grad-apple-watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE250BFB1C74CF260053EDB5 /* days-until-grad-apple-watch.app */; };
 		CE250C271C7564560053EDB5 /* GraduationDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C261C7564560053EDB5 /* GraduationDates.swift */; };
 		CE55D7D31C75931E00DF65D3 /* GraduationDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250C261C7564560053EDB5 /* GraduationDates.swift */; };
+		CE797F0F1C9D29EE00790251 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797F0E1C9D29EE00790251 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		CE250C181C74CF260053EDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE250C1A1C74CF260053EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE250C261C7564560053EDB5 /* GraduationDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraduationDates.swift; sourceTree = "<group>"; };
+		CE797F0E1C9D29EE00790251 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				CE250BE71C7487BB0053EDB5 /* AppDelegate.swift */,
 				CE250BE91C7487BB0053EDB5 /* ViewController.swift */,
+				CE797F0E1C9D29EE00790251 /* CountdownView.swift */,
 				CE250C261C7564560053EDB5 /* GraduationDates.swift */,
 				CE250BEB1C7487BB0053EDB5 /* Main.storyboard */,
 				CE250BEE1C7487BB0053EDB5 /* Assets.xcassets */,
@@ -308,6 +311,7 @@
 			files = (
 				CE250BEA1C7487BB0053EDB5 /* ViewController.swift in Sources */,
 				CE250C271C7564560053EDB5 /* GraduationDates.swift in Sources */,
+				CE797F0F1C9D29EE00790251 /* CountdownView.swift in Sources */,
 				CE250BE81C7487BB0053EDB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

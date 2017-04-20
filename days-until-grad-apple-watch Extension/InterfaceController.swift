@@ -37,9 +37,9 @@ class InterfaceController: WKInterfaceController {
     var timer: NSTimer?
     
     func redoLabels() {
-        let timeLeft = GraduationDates.readableTimeLeft()
+        let timeLeft = GraduationDate.graduationDate.readableTimeLeft()
         
         self.numberLabel.setText("\(timeLeft.number)")
-        self.textLabel.setText(timeLeft.text)
+        self.textLabel.setText("\(timeLeft.text)")
     }
 }

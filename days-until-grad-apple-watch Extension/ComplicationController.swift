@@ -19,7 +19,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
 //        handler(nil)
-        handler(NSDate(timeIntervalSince1970: 0))
+        handler(NSDate(timeIntervalSince1970: -Double(INT_MAX)))
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
@@ -84,7 +84,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func template(family family: CLKComplicationFamily, date: NSDate?) -> CLKComplicationTemplate {
         let template: CLKComplicationTemplate
-        let daysLeft: Int? = date != nil ? GraduationDates.roundedDaysUntil(date!) : nil
+        let daysLeft: Int? = date != nil ? GraduationDate.graduationDate.roundedDaysUntil(date!) : nil
         
         switch family {
         case .ModularSmall:

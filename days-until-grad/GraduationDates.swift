@@ -8,47 +8,56 @@
 
 import Foundation
 
+/// Rounds `x` divided by `y` to the nearest integer, including negative numbers.
+private func roundedDivision(divisor x: Double, dividend y: Double) -> Int? {
+    if y == 0 { return nil }
+    
+    let quotient: Double = x / y
+    let result: Int
+    if (x > 0 && y > 0) || (x < 0 && y < 0) {
+        result = Int(quotient + 0.5)
+    } else {
+        result = Int(quotient - 0.5)
+    }
+    
+    return result
+}
+
 /// Handles dates etc.
-struct GraduationDates {
-    private static let graduationDate = NSDate(timeIntervalSince1970: 1464364800) // 1464364800
+struct GraduationDate {
+    static let graduationDate = GraduationDate(date: NSDate(timeIntervalSince1970: 1464364800), subject: "Graduation")
+    static let promDate = GraduationDate(date: NSDate(timeIntervalSince1970: 1461409200), subject: "prom")
     
-    /// Rounds `x` divided by `y` to the nearest integer, including negative numbers.
-    private static func roundedDivision(divisor x: Double, dividend y: Double) -> Int? {
-        if y == 0 { return nil }
-        
-        let quotient: Double = x / y
-        let result: Int
-        if (x > 0 && y > 0) || (x < 0 && y < 0) {
-            result = Int(quotient + 0.5)
-        } else {
-            result = Int(quotient - 0.5)
-        }
-        
-        return result
+    private let date: NSDate
+    let subject: String
+    
+    init(date: NSDate, subject: String) {
+        self.date = date
+        self.subject = subject
+    }    
+    
+    private func roundedSecondsLeft() -> Int {
+        return roundedDivision(divisor: self.date.timeIntervalSinceNow, dividend: 1)!
     }
     
-    private static func roundedSecondsLeft() -> Int {
-        return self.roundedDivision(divisor: self.graduationDate.timeIntervalSinceNow, dividend: 1)!
+    private func roundedMinutesLeft() -> Int {
+        return roundedDivision(divisor: self.date.timeIntervalSinceNow, dividend: 60)!
     }
     
-    private static func roundedMinutesLeft() -> Int {
-        return self.roundedDivision(divisor: self.graduationDate.timeIntervalSinceNow, dividend: 60)!
+    private func roundedHoursLeft() -> Int {
+        return roundedDivision(divisor: self.date.timeIntervalSinceNow, dividend: 60 * 60)!
     }
     
-    private static func roundedHoursLeft() -> Int {
-        return self.roundedDivision(divisor: self.graduationDate.timeIntervalSinceNow, dividend: 60 * 60)!
-    }
-    
-    private static func roundedDaysLeft() -> Int {
+    private func roundedDaysLeft() -> Int {
         return self.roundedDaysUntil(NSDate())
     }
     
     /// Rounds up for positive numbers, down for negative numbers.
-    static func roundedDaysUntil(date: NSDate) -> Int {
+    func roundedDaysUntil(date: NSDate) -> Int {
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Era, .Year, .Month, .Day], fromDate: date)
         let roundedDate = calendar.dateFromComponents(components)
-        let daysLeft = self.graduationDate.timeIntervalSinceDate(roundedDate!) / 60 / 60 / 24
+        let daysLeft = self.date.timeIntervalSinceDate(roundedDate!) / 60 / 60 / 24
         if daysLeft >= 0 {
             return Int(daysLeft)
         } else {
@@ -56,9 +65,9 @@ struct GraduationDates {
         }
     }
     
-    static func readableTimeLeft() -> ReadableTimeLeft {
+    func readableTimeLeft() -> ReadableTimeLeft {
         let number: Int
-        let text: String
+        let unit, comparator: String
         
         let secondsLeft = self.roundedSecondsLeft(),
             minutesLeft = self.roundedMinutesLeft(),
@@ -66,45 +75,65 @@ struct GraduationDates {
             daysLeft = self.roundedDaysLeft()
         
         if secondsLeft >= 0 {
+            comparator = "until"
             if secondsLeft < 60 {
                 number = secondsLeft
-                text = secondsLeft != 1 ? "SECONDS LEFT" : "SECOND LEFT"
+                unit = secondsLeft != 1 ? "seconds" : "second"
             } else if minutesLeft < 60 {
                 number = minutesLeft
-                text = minutesLeft != 1 ? "MINUTES LEFT" : "MINUTE LEFT"
+                unit = minutesLeft != 1 ? "minutes" : "minute"
             } else if hoursLeft < 24 {
                 number = hoursLeft
-                text = hoursLeft != 1 ? "HOURS LEFT" : "HOUR LEFT"
+                unit = hoursLeft != 1 ? "hours" : "hour"
             } else {
                 number = daysLeft
-                text = "DAYS LEFT"
+                unit = "days"
             }
         } else {
+            comparator = "since"
             if secondsLeft > -60 {
                 number = -secondsLeft
-                text = secondsLeft != -1 ? "SECONDS AGO" : "SECOND AGO"
+                unit = secondsLeft != -1 ? "seconds" : "second"
             } else if minutesLeft > -60 {
                 number = -minutesLeft
-                text = minutesLeft != -1 ? "MINUTES AGO" : "MINUTE AGO"
+                unit = minutesLeft != -1 ? "minutes" : "minute"
             } else if hoursLeft > -24 {
                 number = -hoursLeft
-                text = hoursLeft != -1 ? "HOURS AGO" : "HOUR AGO"
+                unit = hoursLeft != -1 ? "hours" : "hour"
             } else {
                 number = -daysLeft
-                text = "DAYS AGO"
+                unit = "days"
             }
         }
         
-        return ReadableTimeLeft(number: number, text: text)
+        return ReadableTimeLeft(number: number, text: ReadableTimeLeftText(unit: unit, comparator: comparator, subject: self.subject))
     }
 }
 
 struct ReadableTimeLeft {
     let number: Int
-    let text: String
+    let text: ReadableTimeLeftText
     
-    private init(number: Int, text: String) {
+    private init(number: Int, text: ReadableTimeLeftText) {
         self.number = number
         self.text = text
+    }
+}
+
+struct ReadableTimeLeftText {
+    let unit: String // e.g. days
+    let comparator: String // e.g. until
+    let subject: String // e.g. graduation
+    
+    private init(unit: String, comparator: String, subject: String) {
+        self.unit = unit
+        self.comparator = comparator
+        self.subject = subject
+    }
+}
+
+extension ReadableTimeLeftText: CustomStringConvertible {
+    var description: String {
+        return "\(self.unit) \(self.comparator) \(self.subject)"
     }
 }
